@@ -1,3 +1,4 @@
+
 //
 //  Animation.swift
 //  Balloons
@@ -8,8 +9,10 @@
 
 import SpriteKit
 
+
 class AnimationScene: SKScene {
     var i=0
+    var levelCounter = 1
     var animationBackground: SKSpriteNode!
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -18,7 +21,7 @@ class AnimationScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
         anchorPoint = CGPoint(x: 0, y: 1.0)
-   
+        
         
         animationBackground = SKSpriteNode(color: UIColor.lightGray, size: size)
         animationBackground.anchorPoint = CGPoint(x: 0, y: 1.0)
@@ -28,11 +31,19 @@ class AnimationScene: SKScene {
     
     override func update(_ currentTime: CFTimeInterval) {
         i += 1
-        // to control the creation speed of the balloon
-        if i%10  == 0
+        // to control the creation speed of the balloon and number of balloons
+        // 20 balloons are created
+        if i%10  == 0 && i<=200
         {
-        addBubble()
+            addBubble()
         }
+        // controls going to the nect level
+        if i >= 250{
+            i = 0
+            levelCounter += 1
+            
+        }
+        
         floatBubbles()
         removeExcessBubbles()
     }
@@ -60,6 +71,16 @@ class AnimationScene: SKScene {
         animationBackground.addChild(bubble)
         let startingPoint = CGPoint(x: size.width*0.1   + CGFloat(arc4random_uniform(UInt32(size.width*0.8))), y: (-1)*size.height)
         bubble.position = startingPoint
+        
+        let levelText = SKLabelNode(fontNamed: "Chalkduster")
+        levelText.text = "Level: \(levelCounter)"
+        levelText.name = "LeveCounter"
+        levelText.fontSize = 65
+        levelText.fontColor = SKColor.black
+        levelText.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+        addChild(levelText)
+        
     }
     
     func floatBubbles() {
@@ -67,7 +88,7 @@ class AnimationScene: SKScene {
             // control the speed of the balloon
             // 400 is too fast
             
-            let yOffset: CGFloat = 50.0
+            let yOffset: CGFloat = 100.0
             let newLocation = CGPoint(x: child.position.x, y: child.position.y + yOffset)
             let moveAction = SKAction.move(to: newLocation, duration: 0.1)
             child.run(moveAction)
@@ -78,6 +99,7 @@ class AnimationScene: SKScene {
         for child in animationBackground.children {
             if child.position.y > 0  {
                 child.removeFromParent()
+                
             }
         }
     }
@@ -87,5 +109,18 @@ class AnimationScene: SKScene {
         let randomNumber = arc4random_uniform(UInt32(color.count))
         let randomColor = color[Int(randomNumber)]
         return (randomColor)
+    }
+    func createRectangle(){
+        let bubble = SKSpriteNode()
+        bubble.name = "remove"
+        bubble.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        
+        bubble.color = colorBalloon()
+        bubble.colorBlendFactor = 1.0
+        //let colors = [UIColor:,"blue","green","darkgreen","brown"]
+        
+        animationBackground.addChild(bubble)
+        let startingPoint = CGPoint(x: size.width*0.1   + CGFloat(arc4random_uniform(UInt32(size.width*0.8))), y: (-1)*size.height)
+        bubble.position = startingPoint
     }
 }

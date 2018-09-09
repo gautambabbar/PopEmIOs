@@ -10,10 +10,12 @@
 		102783182144AB35008B58D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783172144AB35008B58D4 /* AppDelegate.swift */; };
 		1027831A2144AB35008B58D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783192144AB35008B58D4 /* ViewController.swift */; };
 		1027831D2144AB35008B58D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1027831B2144AB35008B58D4 /* Main.storyboard */; };
-		1027831F2144AB36008B58D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1027831E2144AB36008B58D4 /* Assets.xcassets */; };
 		102783222144AB36008B58D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102783202144AB36008B58D4 /* LaunchScreen.storyboard */; };
 		1027832D2144AB36008B58D4 /* BalloonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027832C2144AB36008B58D4 /* BalloonsTests.swift */; };
 		102783382144AB36008B58D4 /* BalloonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783372144AB36008B58D4 /* BalloonsUITests.swift */; };
+		102783462144B070008B58D4 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783452144B070008B58D4 /* Animation.swift */; };
+		1027834C2145075D008B58D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1027834B2145075C008B58D4 /* Assets.xcassets */; };
+		102CCD4321450B9B00FCF57C /* balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 102CCD4221450B9A00FCF57C /* balloon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		102783172144AB35008B58D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		102783192144AB35008B58D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1027831C2144AB35008B58D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1027831E2144AB36008B58D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		102783212144AB36008B58D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		102783232144AB36008B58D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102783282144AB36008B58D4 /* BalloonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalloonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +48,9 @@
 		102783332144AB36008B58D4 /* BalloonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalloonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		102783372144AB36008B58D4 /* BalloonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonsUITests.swift; sourceTree = "<group>"; };
 		102783392144AB36008B58D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		102783452144B070008B58D4 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		1027834B2145075C008B58D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		102CCD4221450B9A00FCF57C /* balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = balloon.png; path = ../../../../Downloads/balloon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,11 @@
 				102783172144AB35008B58D4 /* AppDelegate.swift */,
 				102783192144AB35008B58D4 /* ViewController.swift */,
 				1027831B2144AB35008B58D4 /* Main.storyboard */,
-				1027831E2144AB36008B58D4 /* Assets.xcassets */,
 				102783202144AB36008B58D4 /* LaunchScreen.storyboard */,
+				1027834B2145075C008B58D4 /* Assets.xcassets */,
 				102783232144AB36008B58D4 /* Info.plist */,
+				102CCD4221450B9A00FCF57C /* balloon.png */,
+				102783452144B070008B58D4 /* Animation.swift */,
 			);
 			path = Balloons;
 			sourceTree = "<group>";
@@ -230,7 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				102783222144AB36008B58D4 /* LaunchScreen.storyboard in Resources */,
-				1027831F2144AB36008B58D4 /* Assets.xcassets in Resources */,
+				102CCD4321450B9B00FCF57C /* balloon.png in Resources */,
+				1027834C2145075D008B58D4 /* Assets.xcassets in Resources */,
 				1027831D2144AB35008B58D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1027831A2144AB35008B58D4 /* ViewController.swift in Sources */,
+				102783462144B070008B58D4 /* Animation.swift in Sources */,
 				102783182144AB35008B58D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

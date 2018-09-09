@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import SpriteKit
 
-class ViewController: UIViewController {
-
+class ViewController:UIViewController{
+    
+    var scene: AnimationScene!
+    var size: CGSize!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        size = self.view.frame.size
+        scene = AnimationScene(size:size)
+        
+        let skView = self.view as! SKView
+        skView.presentScene(scene)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
+
+
 

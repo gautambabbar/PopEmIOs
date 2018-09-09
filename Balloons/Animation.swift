@@ -51,14 +51,14 @@ class AnimationScene: SKScene {
     func addBubble() {
         let bubble = SKSpriteNode(imageNamed: "balloon.png")
         bubble.name = "remove"
-        
+        bubble.anchorPoint = CGPoint(x: 0.5, y: 1.0)
         
         bubble.color = colorBalloon()
         bubble.colorBlendFactor = 1.0
         //let colors = [UIColor:,"blue","green","darkgreen","brown"]
         
         animationBackground.addChild(bubble)
-        let startingPoint = CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width))), y: (-1)*size.height)
+        let startingPoint = CGPoint(x: size.width*0.1   + CGFloat(arc4random_uniform(UInt32(size.width*0.8))), y: (-1)*size.height)
         bubble.position = startingPoint
     }
     
@@ -83,11 +83,7 @@ class AnimationScene: SKScene {
     }
     func colorBalloon() -> UIColor{
         var color = [UIColor]()
-        color.append(UIColor.cyan)
-        color.append(UIColor.red)
-        color.append(UIColor.blue)
-        color.append(UIColor.green)
-        color.append(UIColor.brown)
+        color = [UIColor.cyan,UIColor.red,UIColor.blue,UIColor.green,UIColor.brown]
         let randomNumber = arc4random_uniform(UInt32(color.count))
         let randomColor = color[Int(randomNumber)]
         return (randomColor)

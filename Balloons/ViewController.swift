@@ -33,7 +33,8 @@ class ViewController:UIViewController{
         addBannerViewToView(bannerView)
         
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test Ad
+        // bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         

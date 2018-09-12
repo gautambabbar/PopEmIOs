@@ -1,31 +1,23 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Balloons
 //
-//  Created by Sarthak Babbar on 9/8/18.
+//  Created by Gautam Babbar on 9/12/18.
 //  Copyright © 2018 Sarthak Babbar. All rights reserved.
 //
 
 import UIKit
-import SpriteKit
 import GoogleMobileAds
 
-class ViewController:UIViewController{
+
+class MainViewController: UIViewController {
     
-    var scene: AnimationScene!
-    var size: CGSize!
     var bannerView: GADBannerView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        size = self.view.frame.size
-        scene = AnimationScene(size:size)
-        
-        let skView = self.view as! SKView
-        skView.presentScene(scene)
-        
-        
+
+        // Do any additional setup after loading the view.
         
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
@@ -34,13 +26,14 @@ class ViewController:UIViewController{
         
         
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test Ad
-         //bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
+        //bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
         
-        
     }
+
+    
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -64,7 +57,25 @@ class ViewController:UIViewController{
     }
     
     
+    
+    
+    
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
-
-
-

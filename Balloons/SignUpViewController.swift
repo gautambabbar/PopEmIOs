@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class SignUpViewController: UIViewController {
 
@@ -14,9 +15,25 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //Load rewarded  ad here..
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
+                                                    withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
+        
     }
     
-
+    
+    @IBAction func btnOK(_ sender: Any) {
+        
+       // Display pre loaded rewarded ad
+        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        }
+        
+        
+        
+        performSegue(withIdentifier: "goToMainFromSignUp", sender: self) // This code works!! for programatic exit
+    }
+    
     /*
     // MARK: - Navigation
 

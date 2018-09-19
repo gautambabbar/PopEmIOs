@@ -64,6 +64,9 @@
                                 <rect key="frame" x="264" y="546" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="btnOK:" destination="a3U-et-4dh" eventType="touchUpInside" id="XrF-vS-lzN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,6 +113,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WqW-Mi-oOB"/>
+        <segue reference="PRN-TF-fhN"/>
     </inferredMetricsTieBreakers>
 </document>

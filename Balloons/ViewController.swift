@@ -17,18 +17,9 @@ class ViewController:UIViewController{
     var bannerView: GADBannerView!
     
     @IBAction func onProgClick(_ sender: Any) {
-        
-        // below code is a test popup
-        //let alertController = UIAlertController(title: "Alert", message: "This is an alert.",preferredStyle: .alert)
-        //self.present(alertController, animated: true, completion: nil)
-        
-        //below code is for a programmatic exit to main activity
-       // self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
-        
-      //  self.present(MainViewController() , animated: true, completion: nil)
-        
         performSegue(withIdentifier: "goToMain", sender: self) // This code works!! for programatic exit
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +33,7 @@ class ViewController:UIViewController{
         
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        
         addBannerViewToView(bannerView)
-        
-        
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test Ad
         // bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
         bannerView.rootViewController = self
@@ -54,6 +42,8 @@ class ViewController:UIViewController{
         
         
     }
+    
+    
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false

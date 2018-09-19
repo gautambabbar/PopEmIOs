@@ -30,6 +30,7 @@ class AnimationScene: SKScene {
     }
     
     override func update(_ currentTime: CFTimeInterval) {
+        
         i += 1
         // to control the creation speed of the balloon and number of balloons
         // 20 balloons are created
@@ -37,7 +38,7 @@ class AnimationScene: SKScene {
         {
             addBubble()
         }
-        // controls going to the nect level
+        // controls going to the next level
         if i >= 250{
             i = 0
             levelCounter += 1

@@ -35,7 +35,7 @@ class ViewController:UIViewController{
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test Ad
-        // bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
+        //bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
@@ -52,8 +52,8 @@ class ViewController:UIViewController{
             [NSLayoutConstraint(item: bannerView,
                                 attribute: .bottom,
                                 relatedBy: .equal,
-                                toItem: bottomLayoutGuide,
-                                attribute: .top,
+                                toItem: view.safeAreaLayoutGuide,
+                                attribute: .bottom,
                                 multiplier: 1,
                                 constant: 0),
              NSLayoutConstraint(item: bannerView,

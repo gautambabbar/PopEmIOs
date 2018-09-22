@@ -14,6 +14,7 @@ class AnimationScene: SKScene {
     var i=0
     var levelCounter = 1
     var animationBackground: SKSpriteNode!
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -48,12 +49,14 @@ class AnimationScene: SKScene {
         floatBubbles()
         removeExcessBubbles()
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches{
             let location = touch.location(in: self)
             for touched in self.nodes(at: location){
                 if touched.name == "remove"{
                     touched.removeFromParent()
+                
                 }
             }
             

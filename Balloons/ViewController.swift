@@ -34,8 +34,8 @@ class ViewController:UIViewController{
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test Ad
-        //bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
+        //bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // Test Ad
+        bannerView.adUnitID = "ca-app-pub-9895741583663083/3658375650" //RealAd
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         

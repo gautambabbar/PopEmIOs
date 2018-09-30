@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         
@@ -32,8 +32,16 @@ class MainViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
+        
+        
+        
+        
     }
 
+    
+    
+    
+    
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
         bannerView.translatesAutoresizingMaskIntoConstraints = false

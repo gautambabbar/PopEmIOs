@@ -23,6 +23,14 @@ class ViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Notification observer
+        NotificationCenter.default.addObserver(self, selector: "gameEnd", name: Notification.Name("GameEnded"), object: nil)
+        
+        
+        
+        
+        
         size = self.view.frame.size
         scene = AnimationScene(size:size)
         
@@ -41,6 +49,13 @@ class ViewController:UIViewController{
         
         
         
+    }
+    
+    
+    @objc func gameEnd()
+    {
+        performSegue(withIdentifier: "goToMain", sender: self)
+        // Dispose of any resources that can be recreated.
     }
     
     

@@ -39,14 +39,17 @@ class AnimationScene: SKScene {
     
     override func update(_ currentTime: CFTimeInterval) {
         
-        // Notifying GameEnd
-        NotificationCenter.default.post(name: Notification.Name("GameEnded"), object: nil)
+       
         
         
         
         
         if gameEnd == "True" {
+            // Notifying GameEnd
+            gameEnd="False"
+            NotificationCenter.default.post(name: Notification.Name("GameEnded"), object: nil)
             return()
+           
         }
         
         //        if levelControl() == 1{

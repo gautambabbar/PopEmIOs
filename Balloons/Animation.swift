@@ -27,7 +27,7 @@ class AnimationScene: SKScene {
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
         
-        animationBackground = SKSpriteNode(color: UIColor.lightGray, size: size)
+        animationBackground = SKSpriteNode(color: UIColor.yellow, size: size)
         animationBackground.anchorPoint = CGPoint(x: 0, y: 1.0)
         animationBackground.position = CGPoint(x: 0, y: 0)
         
@@ -36,6 +36,7 @@ class AnimationScene: SKScene {
         
         self.addChild(animationBackground)
     }
+    
     
     override func update(_ currentTime: CFTimeInterval) {
         
@@ -52,14 +53,11 @@ class AnimationScene: SKScene {
            
         }
         
-        //        if levelControl() == 1{
-        //            addRectangle()
-        //        }
         
         i += 1
         // to control the creation speed of the balloon and number of balloons
         // 20 balloons are created
-        if i%10  == 0 && i<=200
+        if i%10  == 0 && i<=100
         {
             addBubble()
         }
@@ -82,7 +80,7 @@ class AnimationScene: SKScene {
                     
                     
                     
-                    if nameString?.contains(String(levelControl())) == false{
+                    if colorCoordinate(balloon_color: nameString!) == false{
                         livesCounter -= 1
                         if livesCounter == 0{
                             // game over move to the other page
@@ -92,10 +90,10 @@ class AnimationScene: SKScene {
                         }
                         
                     }
-                    //if touched.== colorBalloon(type: "bar", number: levelControl()){
+                   
                     touched.removeFromParent()
                     
-                    //}
+                    
                 }
             }
             
@@ -152,7 +150,8 @@ class AnimationScene: SKScene {
             // 400 is too fast
             
             if child.name != "bar"{
-                let yOffset: CGFloat = CGFloat((levelCounter%10)*30)
+//
+                let yOffset: CGFloat = CGFloat(((levelCounter%10)*10)+20)
                 let newLocation = CGPoint(x: child.position.x, y: child.position.y + yOffset)
                 let moveAction = SKAction.move(to: newLocation, duration: 0.1)
                 child.run(moveAction)
@@ -163,7 +162,7 @@ class AnimationScene: SKScene {
     func removeExcessBubbles() {
         for child in animationBackground.children {
             if child.position.y > 0 {
-                if child.name?.contains(String(levelControl())) == true{
+                if colorCoordinate(balloon_color: child.name!) == true{
                     livesCounter -= 1
                     if livesCounter == 0 {
                         gameEnd = "True"
@@ -182,35 +181,59 @@ class AnimationScene: SKScene {
         return color[number-1]
     }
     
+  
     
-    func createRectangle(rectangleNumber:Int){
-        let bar = SKSpriteNode(color:applyColor(number:levelControl()), size: CGSize(width: frame.maxX/CGFloat(rectangleNumber), height: 50))
-        //        /CGFloat(rectangleNumber)
-        bar.name = "bar"
-        bar.anchorPoint = CGPoint(x: 0.5, y: 1.0)
-        
-        bar.colorBlendFactor = 1.0
-        barColor = String(levelControl()-1)
-        
-        let startingPoint = CGPoint(x:frame.midX, y: frame.maxY+30)
-        //        (CGFloat(rectangleNumber-1)*bar.size.width)
-        bar.position = startingPoint
-        animationBackground.addChild(bar)
-    }
-    
-    func addRectangle(){
-        for j in 0...levelControl(){
-            createRectangle(rectangleNumber: j+1)
-        }
-    }
-    func removeRectangle(){
-        for child in animationBackground.children {
-            if child.name == "bar"{
-                child.removeFromParent()
+    func colorCoordinate(balloon_color:String) -> Bool{
+        if levelControl() == 1
+        {
+            if balloon_color.contains("1"){
+                return true
+            }
+            else{
+                return false
             }
         }
+        else if levelControl() == 2
+        {
+            if balloon_color.contains("1") || balloon_color.contains("2"){
+                print("yes")
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        else if levelControl() == 3
+        {
+            if balloon_color.contains("1") || balloon_color.contains("2")  || balloon_color.contains("3"){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        else if levelControl() == 4
+        {
+            if balloon_color.contains("1") || balloon_color.contains("2")  || balloon_color.contains("3")  || balloon_color.contains("4"){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        else if levelControl() == 5
+        {
+            if balloon_color.contains("1") || balloon_color.contains("2")  || balloon_color.contains("3")  || balloon_color.contains("4")  || balloon_color.contains("5"){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        return true
     }
     
+
     func levelControl() -> Int{
         var control:Int
         switch levelCounter{

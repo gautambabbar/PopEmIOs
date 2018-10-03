@@ -84,25 +84,6 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olY-fb-tcW">
-                                <rect key="frame" x="197" y="511" width="35" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="EXIT"/>
-                                <connections>
-                                    <segue destination="lSx-oX-lsm" kind="show" identifier="goToMain" id="WqW-Mi-oOB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyi-KB-JO4">
-                                <rect key="frame" x="68" y="511" width="58" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ProgExit"/>
-                                <connections>
-                                    <action selector="onProgClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CHE-Ok-ZmU"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -112,7 +93,4 @@
             <point key="canvasLocation" x="76" y="100"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="PRN-TF-fhN"/>
-    </inferredMetricsTieBreakers>
 </document>

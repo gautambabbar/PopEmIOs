@@ -18,7 +18,11 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "sky.jpg")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
         // Do any additional setup after loading the view.
 
         // In this case, we instantiate the banner with desired ad size.

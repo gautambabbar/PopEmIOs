@@ -17,6 +17,7 @@ class AnimationScene: SKScene {
     var levelCounter = 1
     var barColor = "1"
     var gameEnd = "False"
+    var msgSent = 0
     var animationBackground: SKSpriteNode!
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -40,15 +41,12 @@ class AnimationScene: SKScene {
     
     override func update(_ currentTime: CFTimeInterval) {
         
-       
-        
-        
-        
-        
         if gameEnd == "True" {
             // Notifying GameEnd
-            gameEnd="False"
+            if msgSent == 0 {
             NotificationCenter.default.post(name: Notification.Name("GameEnded"), object: nil)
+            msgSent += 1
+            }
             return()
            
         }
@@ -82,7 +80,7 @@ class AnimationScene: SKScene {
                     
                     if colorCoordinate(balloon_color: nameString!) == false{
                         livesCounter -= 1
-                        if livesCounter == 0{
+                        if livesCounter < 1 {
                             // game over move to the other page
                             gameEnd = "True"
                             
@@ -164,7 +162,7 @@ class AnimationScene: SKScene {
             if child.position.y > 0 {
                 if colorCoordinate(balloon_color: child.name!) == true{
                     livesCounter -= 1
-                    if livesCounter == 0 {
+                    if livesCounter < 1 {
                         gameEnd = "True"
                     }
                 }

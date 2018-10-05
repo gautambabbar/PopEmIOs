@@ -15,7 +15,6 @@
 		102783382144AB36008B58D4 /* BalloonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783372144AB36008B58D4 /* BalloonsUITests.swift */; };
 		102783462144B070008B58D4 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783452144B070008B58D4 /* Animation.swift */; };
 		1027834C2145075D008B58D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1027834B2145075C008B58D4 /* Assets.xcassets */; };
-		104EE12321646C6A009CCEA9 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 104EE12221646C6A009CCEA9 /* sky.jpg */; };
 		32C39D1E8CBCAD0281EF544D /* Pods_Balloons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCFB582C78BA9647B0FED38 /* Pods_Balloons.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		735CA3C2D741E8935DDEBB16 /* Pods_BalloonsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA40C993A311B65F82EB7E39 /* Pods_BalloonsTests.framework */; };
 		8426D21EE5CC56B094BAA296 /* Pods_BalloonsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B76DF42DF99D9FAC1415DE6 /* Pods_BalloonsUITests.framework */; };
@@ -57,7 +56,6 @@
 		102783392144AB36008B58D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102783452144B070008B58D4 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		1027834B2145075C008B58D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		104EE12221646C6A009CCEA9 /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sky.jpg; path = ../../../Downloads/sky.jpg; sourceTree = "<group>"; };
 		2154947101A06C32AF423992 /* Pods-BalloonsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalloonsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BalloonsTests/Pods-BalloonsTests.release.xcconfig"; sourceTree = "<group>"; };
 		28F3A1DEBA7E3C3861FFF37E /* Pods-Balloons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balloons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Balloons/Pods-Balloons.debug.xcconfig"; sourceTree = "<group>"; };
 		317B0B155B1B50FD7EF07711 /* Pods-BalloonsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalloonsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BalloonsUITests/Pods-BalloonsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				102783202144AB36008B58D4 /* LaunchScreen.storyboard */,
 				1027834B2145075C008B58D4 /* Assets.xcassets */,
 				102783232144AB36008B58D4 /* Info.plist */,
-				104EE12221646C6A009CCEA9 /* sky.jpg */,
 				87ED0C6821459942003E7436 /* balloon.png */,
 				102783452144B070008B58D4 /* Animation.swift */,
 			);
@@ -288,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				102783222144AB36008B58D4 /* LaunchScreen.storyboard in Resources */,
-				104EE12321646C6A009CCEA9 /* sky.jpg in Resources */,
 				87ED0C6921459942003E7436 /* balloon.png in Resources */,
 				1027834C2145075D008B58D4 /* Assets.xcassets in Resources */,
 				1027831D2144AB35008B58D4 /* Main.storyboard in Resources */,

@@ -15,6 +15,7 @@ class ViewController:UIViewController{
     var scene: AnimationScene!
     var size: CGSize!
     var bannerView: GADBannerView!
+    var skView:SKView! = nil
     
     @IBAction func onProgClick(_ sender: Any) {
         performSegue(withIdentifier: "goToMain", sender: self) // This code works!! for programatic exit
@@ -33,7 +34,7 @@ class ViewController:UIViewController{
         size = self.view.frame.size
         scene = AnimationScene(size:size)
         
-        let skView = self.view as! SKView
+       skView = self.view as! SKView
         skView.presentScene(scene)
         
         
@@ -53,6 +54,9 @@ class ViewController:UIViewController{
     
     @objc func gameEnd()
     {
+        
+        skView.presentScene(nil)
+        //present(SignUpViewController(),animated: true, completion: nil)
         performSegue(withIdentifier: "goToMain", sender: self)
         // Dispose of any resources that can be recreated.
     }

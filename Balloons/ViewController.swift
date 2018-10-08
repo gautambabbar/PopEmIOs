@@ -26,11 +26,7 @@ class ViewController:UIViewController{
         super.viewDidLoad()
         // Notification observer
         NotificationCenter.default.addObserver(self, selector: "gameEnd", name: Notification.Name("GameEnded"), object: nil)
-        
-        
-        
-        
-        
+
         size = self.view.frame.size
         scene = AnimationScene(size:size)
         

@@ -103,7 +103,7 @@
         <!--Instruction View Controller-->
         <scene sceneID="pab-p9-Psd">
             <objects>
-                <viewController id="9dF-sL-IUu" userLabel="Instruction View Controller" sceneMemberID="viewController">
+                <viewController id="9dF-sL-IUu" userLabel="Instruction View Controller" customClass="InstructionsViewController" customModule="Balloons" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZk-20-gvC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

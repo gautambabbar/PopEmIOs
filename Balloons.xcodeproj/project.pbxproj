@@ -18,6 +18,7 @@
 		32C39D1E8CBCAD0281EF544D /* Pods_Balloons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCFB582C78BA9647B0FED38 /* Pods_Balloons.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		735CA3C2D741E8935DDEBB16 /* Pods_BalloonsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA40C993A311B65F82EB7E39 /* Pods_BalloonsTests.framework */; };
 		8426D21EE5CC56B094BAA296 /* Pods_BalloonsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B76DF42DF99D9FAC1415DE6 /* Pods_BalloonsUITests.framework */; };
+		8713079A21716BD800A0D48E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8713079921716BD800A0D48E /* background.png */; };
 		8727AEC72149949B00324C41 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727AEC62149949B00324C41 /* MainViewController.swift */; };
 		87704A2D2152BA6600631522 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87704A2C2152BA6600631522 /* SignUpViewController.swift */; };
 		87ED0C6921459942003E7436 /* balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87ED0C6821459942003E7436 /* balloon.png */; };
@@ -60,6 +61,7 @@
 		28F3A1DEBA7E3C3861FFF37E /* Pods-Balloons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Balloons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Balloons/Pods-Balloons.debug.xcconfig"; sourceTree = "<group>"; };
 		317B0B155B1B50FD7EF07711 /* Pods-BalloonsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalloonsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BalloonsUITests/Pods-BalloonsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		803397CF4D3EE5DC61489A49 /* Pods-BalloonsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalloonsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BalloonsUITests/Pods-BalloonsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8713079921716BD800A0D48E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		8727AEC62149949B00324C41 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		87704A2C2152BA6600631522 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		87ED0C6821459942003E7436 /* balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon.png; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		102783162144AB35008B58D4 /* Balloons */ = {
 			isa = PBXGroup;
 			children = (
+				8713079921716BD800A0D48E /* background.png */,
 				102783172144AB35008B58D4 /* AppDelegate.swift */,
 				102783192144AB35008B58D4 /* ViewController.swift */,
 				1027831B2144AB35008B58D4 /* Main.storyboard */,
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				102783222144AB36008B58D4 /* LaunchScreen.storyboard in Resources */,
+				8713079A21716BD800A0D48E /* background.png in Resources */,
 				87ED0C6921459942003E7436 /* balloon.png in Resources */,
 				1027834C2145075D008B58D4 /* Assets.xcassets in Resources */,
 				1027831D2144AB35008B58D4 /* Main.storyboard in Resources */,

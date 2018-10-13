@@ -27,8 +27,8 @@ class AnimationScene: SKScene {
         super.init(size: size)
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
-        
-        animationBackground = SKSpriteNode(color: UIColor.yellow, size: size)
+        animationBackground = SKSpriteNode(imageNamed: "background.png")
+        //animationBackground = SKSpriteNode(color: UIColor.yellow, size: size)
         animationBackground.anchorPoint = CGPoint(x: 0, y: 1.0)
         animationBackground.position = CGPoint(x: 0, y: 0)
         

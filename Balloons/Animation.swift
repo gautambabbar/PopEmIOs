@@ -47,7 +47,7 @@ class AnimationScene: SKScene {
             NotificationCenter.default.post(name: Notification.Name("GameEnded"), object: nil)
             msgSent += 1
             }
-            return()
+            return
            
         }
         
@@ -58,6 +58,7 @@ class AnimationScene: SKScene {
         if i%10  == 0 && i<=100
         {
             addBubble()
+            addBalloonIcon()
         }
         // controls going to the next level
         if i >= 250{
@@ -149,7 +150,7 @@ class AnimationScene: SKScene {
             
             if child.name != "bar"{
 //
-                let yOffset: CGFloat = CGFloat(((levelCounter%10)*10)+20)
+                let yOffset: CGFloat = CGFloat((((levelCounter-1)%10)*10)+20)
                 let newLocation = CGPoint(x: child.position.x, y: child.position.y + yOffset)
                 let moveAction = SKAction.move(to: newLocation, duration: 0.1)
                 child.run(moveAction)
@@ -169,6 +170,70 @@ class AnimationScene: SKScene {
                 child.removeFromParent()
             }
             
+        }
+    }
+    
+    func createBalloonIcon(colorNumber:Int,position:Int) {
+        let icon = SKShapeNode(circleOfRadius:15)
+        icon.name = "icon"
+        icon.position = CGPoint(x: frame.maxX-CGFloat(30+position), y: frame.maxY-50)
+        icon.glowWidth = 1.0
+        icon.fillColor = applyColor(number: colorNumber)
+        addChild(icon)
+        
+    }
+    func removeBalloonIcon(){
+        for child in animationBackground.children{
+            if child.name == "icon"{
+                child.removeFromParent()
+            }
+        }
+    }
+    func addBalloonIcon(){
+        var iconPosition:Int
+        var numberIcons:Int
+        switch levelCounter{
+        case  1..<11:
+            numberIcons = 1
+            for i in 1...numberIcons{
+                iconPosition = i
+                createBalloonIcon(colorNumber: i,position: Int(15)*(iconPosition-1))
+            }
+        case  11..<21:
+            removeBalloonIcon()
+            numberIcons = 2
+            for i in 1...numberIcons{
+                iconPosition = i
+                createBalloonIcon(colorNumber: i,position: Int(15)*(iconPosition-1))
+            }
+        case  21..<31:
+            removeBalloonIcon()
+            numberIcons = 3
+            for i in 1...numberIcons{
+                iconPosition = i
+                createBalloonIcon(colorNumber: i,position: Int(15)*(iconPosition-1))
+            }
+        case  31...41:
+            removeBalloonIcon()
+            numberIcons = 4
+            for i in 1...numberIcons{
+                iconPosition = i
+                createBalloonIcon(colorNumber: i,position: Int(15)*(iconPosition-1))
+            }
+        case  40..<51:
+            removeBalloonIcon()
+            numberIcons = 5
+            for i in 1...numberIcons{
+                iconPosition = i
+                createBalloonIcon(colorNumber: i,position: Int(15)*(iconPosition-1))
+            }
+            
+        default:
+            numberIcons = 1
+            for i in 1...numberIcons{
+                iconPosition = i
+                createBalloonIcon(colorNumber: i,position: Int(15)*(iconPosition-1))
+            }
         }
     }
     
@@ -194,7 +259,6 @@ class AnimationScene: SKScene {
         else if levelControl() == 2
         {
             if balloon_color.contains("1") || balloon_color.contains("2"){
-                print("yes")
                 return true
             }
             else {
@@ -256,4 +320,5 @@ class AnimationScene: SKScene {
             return control
         }
     }
+    
 }

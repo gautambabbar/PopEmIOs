@@ -10,7 +10,6 @@
 		102783182144AB35008B58D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783172144AB35008B58D4 /* AppDelegate.swift */; };
 		1027831A2144AB35008B58D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783192144AB35008B58D4 /* ViewController.swift */; };
 		1027831D2144AB35008B58D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1027831B2144AB35008B58D4 /* Main.storyboard */; };
-		102783222144AB36008B58D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102783202144AB36008B58D4 /* LaunchScreen.storyboard */; };
 		1027832D2144AB36008B58D4 /* BalloonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027832C2144AB36008B58D4 /* BalloonsTests.swift */; };
 		102783382144AB36008B58D4 /* BalloonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783372144AB36008B58D4 /* BalloonsUITests.swift */; };
 		102783462144B070008B58D4 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102783452144B070008B58D4 /* Animation.swift */; };
@@ -49,7 +48,6 @@
 		102783172144AB35008B58D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		102783192144AB35008B58D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1027831C2144AB35008B58D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		102783212144AB36008B58D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		102783232144AB36008B58D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102783282144AB36008B58D4 /* BalloonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalloonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1027832C2144AB36008B58D4 /* BalloonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonsTests.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				1027831B2144AB35008B58D4 /* Main.storyboard */,
 				87704A2C2152BA6600631522 /* SignUpViewController.swift */,
 				8727AEC62149949B00324C41 /* MainViewController.swift */,
-				102783202144AB36008B58D4 /* LaunchScreen.storyboard */,
 				1027834B2145075C008B58D4 /* Assets.xcassets */,
 				10E6FAA1217236BC009CCDE9 /* instruction.png */,
 				102783232144AB36008B58D4 /* Info.plist */,
@@ -294,7 +291,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				10E6FAA2217236BC009CCDE9 /* instruction.png in Resources */,
-				102783222144AB36008B58D4 /* LaunchScreen.storyboard in Resources */,
 				8713079A21716BD800A0D48E /* background.png in Resources */,
 				87ED0C6921459942003E7436 /* balloon.png in Resources */,
 				1027834C2145075D008B58D4 /* Assets.xcassets in Resources */,
@@ -427,14 +423,6 @@
 				1027831C2144AB35008B58D4 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		102783202144AB36008B58D4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				102783212144AB36008B58D4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

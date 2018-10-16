@@ -42,7 +42,8 @@ class AnimationScene: SKScene {
     override func update(_ currentTime: CFTimeInterval) {
         
         if gameEnd == "True" {
-            
+            // Persistent Storage using USerDefaults --> store highscore on gameend
+            UserDefaults.standard.set(levelCounter, forKey: "highScore")
             
             
             

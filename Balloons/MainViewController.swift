@@ -13,11 +13,18 @@ import GoogleMobileAds
 class MainViewController: UIViewController {
     
     
+    @IBOutlet weak var highScoreLabel: UILabel!
     
     var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // this is the code to upate the highscore
+        let highScore = UserDefaults.standard.string(forKey: "highScore") ?? "0"
+        highScoreLabel.text = "High Score: " + highScore
+        
+        
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "background.png")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!

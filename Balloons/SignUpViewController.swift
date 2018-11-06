@@ -36,6 +36,8 @@ class SignUpViewController: UIViewController {
         performSegue(withIdentifier: "goToMainFromSignUp", sender: self) // This code works!! for programatic exit
     }
     
+    
+    
     /*
     // MARK: - Navigation
 

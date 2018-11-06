@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYy-X9-Gg8">
-                                <rect key="frame" x="162" y="203" width="90" height="131"/>
+                                <rect key="frame" x="142" y="271" width="90" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="28"/>
                                 <state key="normal" title="Play">
@@ -29,8 +29,49 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="HTq-dC-Fva"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA3-7R-mQt">
+                                <rect key="frame" x="158" y="417" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Instruction"/>
+                                <connections>
+                                    <segue destination="9dF-sL-IUu" kind="show" identifier="goToInstructionsFromMain" id="vDE-bU-oak"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-S9-op7">
+                                <rect key="frame" x="164" y="455" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <segue destination="a3U-et-4dh" kind="show" identifier="goToSignUpFromMain" id="uCz-1F-qXi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evb-gi-0O5">
+                                <rect key="frame" x="142" y="493" width="130" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chE-tB-3Rr">
+                                <rect key="frame" x="204" y="107" width="181" height="119"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" summaryElement="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="delegate" destination="lSx-oX-lsm" id="udi-s9-XWO"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpF-aD-M3l">
+                                <rect key="frame" x="213" y="69" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="btnSettingsClick:" destination="lSx-oX-lsm" eventType="touchUpInside" id="U7G-Oa-OMH"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isW-H9-3GE">
-                                <rect key="frame" x="67" y="44" width="280" height="151"/>
+                                <rect key="frame" x="55" y="183" width="280" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Pop'Em">
@@ -42,34 +83,13 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wA3-7R-mQt">
-                                <rect key="frame" x="170" y="410" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Instruction"/>
-                                <connections>
-                                    <segue destination="9dF-sL-IUu" kind="show" id="vDE-bU-oak"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Boq-S9-op7">
-                                <rect key="frame" x="182" y="605" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SignUp"/>
-                                <connections>
-                                    <segue destination="a3U-et-4dh" kind="show" id="uCz-1F-qXi"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evb-gi-0O5">
-                                <rect key="frame" x="142" y="493" width="130" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fy2-9S-Pyh"/>
                     </view>
                     <connections>
+                        <outlet property="btnSettings" destination="MpF-aD-M3l" id="gwh-kf-gFr"/>
+                        <outlet property="drpDownSettings" destination="chE-tB-3Rr" id="3Vq-iP-xSI"/>
                         <outlet property="highScoreLabel" destination="evb-gi-0O5" id="zGp-kF-wZl"/>
                     </connections>
                 </viewController>
@@ -98,7 +118,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
-                                    <action selector="btnOK:" destination="a3U-et-4dh" eventType="touchUpInside" id="XrF-vS-lzN"/>
+                                    <action selector="btnOK:" destination="a3U-et-4dh" eventType="touchUpInside" id="48E-22-A6c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTG-l4-FKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="978"/>
+            <point key="canvasLocation" x="-894.20289855072474" y="977.67857142857133"/>
         </scene>
         <!--Instruction View Controller-->
         <scene sceneID="pab-p9-Psd">
@@ -118,9 +138,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74d-N5-5pJ">
-                                <rect key="frame" x="121" y="626" width="173" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74d-N5-5pJ">
+                                <rect key="frame" x="121" y="524" width="173" height="109"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="go Back">
@@ -133,11 +152,15 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="lSx-oX-lsm" kind="show" id="HJV-he-ssY"/>
+                                    <action selector="btnBackClick:" destination="9dF-sL-IUu" eventType="touchUpInside" id="czp-Gi-5Lj"/>
+                                    <segue destination="lSx-oX-lsm" kind="show" identifier="goToMainFromInstructions" id="HJV-he-ssY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8sT-Tg-tZA" firstAttribute="bottom" secondItem="74d-N5-5pJ" secondAttribute="bottom" constant="163" id="BVU-fa-Aok"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8sT-Tg-tZA"/>
                     </view>
                 </viewController>

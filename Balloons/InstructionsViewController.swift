@@ -35,7 +35,7 @@ class InstructionsViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
-        
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),withAdUnitID: "ca-app-pub-9895741583663083/7067689930") //Real Ad
         
         
         
@@ -72,6 +72,15 @@ class InstructionsViewController: UIViewController {
     
     
     
+    @IBAction func btnBackClick(_ sender: Any) {
+        
+        // Display pre loaded rewarded ad
+        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        }
+        performSegue(withIdentifier: "goToMainFromInstructions", sender: self) // This code works!! for programatic exit
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
